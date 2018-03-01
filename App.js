@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import { StackNavigator } from 'react-navigation';
 import OpacityScreen from './src/Opacity';
 import TranslatePositionScreen from './src/TranslatePosition';
+import ScaleScreen from './src/Scale';
 
 const Container = styled.View`
   flex: 1;
@@ -12,10 +13,10 @@ const Container = styled.View`
 `;
 
 const Button = styled.TouchableOpacity`
-  height: 100px;
+  height: 70px;
 `;
 
-const menuItems = ['Opacity', 'TranslatePosition'];
+const menuItems = ['Opacity', 'TranslatePosition', 'Scale'];
 
 const MenuScreen = ({ navigation }) => {
   return (
@@ -40,6 +41,9 @@ export default StackNavigator(
     },
     TranslatePosition: {
       screen: TranslatePositionScreen,
+    },
+    Scale: {
+      screen: ScaleScreen,
     }
   },
   {
